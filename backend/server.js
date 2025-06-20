@@ -29,18 +29,14 @@ const createIssueLimit = rateLimit({
   message: 'Too many issues created, please try again later'
 });
 
-// Only apply rate limiting to POST requests in development
-if (process.env.NODE_ENV === 'development') {
-  app.use('/api/issues', (req, res, next) => {
-    if (req.method === 'POST') {
-      createIssueLimit(req, res, next);
-    } else {
-      next();
-    }
-  });
-} else {
-  app.use('/api/issues', createIssueLimit);
-}
+// Apply create issue rate limiting only to POST requests
+app.use('/api/issues', (req, res, next) => {
+  if (req.method === 'POST') {
+    createIssueLimit(req, res, next);
+  } else {
+    next();
+  }
+});
 app.use(limiter);
 
 // CORS configuration

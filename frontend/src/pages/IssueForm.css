@@ -69,6 +69,53 @@
   color: var(--warning-500);
 }
 
+/* Mobile Responsive Improvements */
+@media (max-width: 768px) {
+  .issue-form-page {
+    padding: var(--space-3);
+  }
+  
+  .form-help {
+    margin-top: var(--space-4);
+    padding: var(--space-3);
+  }
+  
+  .draft-indicator {
+    bottom: var(--space-4);
+    right: var(--space-4);
+    left: var(--space-4);
+    text-align: center;
+    border-radius: var(--radius-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .issue-form-page {
+    padding: var(--space-2);
+  }
+  
+  .issue-form {
+    gap: var(--space-3);
+  }
+  
+  .form-help {
+    padding: var(--space-2);
+    margin-top: var(--space-3);
+  }
+  
+  .form-help h3 {
+    font-size: var(--text-sm);
+  }
+  
+  .draft-indicator {
+    bottom: var(--space-3);
+    right: var(--space-3);
+    left: var(--space-3);
+    font-size: var(--text-xs);
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
 .character-count.error {
   color: var(--error-500);
 }

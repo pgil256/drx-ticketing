@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  padding: 20px;
+  padding: var(--space-4, 16px);
 }
 
 .technician-panel {
@@ -46,13 +46,14 @@
   cursor: pointer;
   color: #7f8c8d;
   padding: 0;
-  width: 30px;
-  height: 30px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
   transition: all 0.3s ease;
+  /* Minimum touch target size for mobile */
 }
 
 .close-btn:hover {
@@ -112,12 +113,14 @@
 .radio-option {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
-  padding: 12px;
+  padding: 16px;
   border: 2px solid #e9ecef;
   border-radius: 6px;
   transition: all 0.3s ease;
+  min-height: 44px;
+  /* Better touch targets for mobile */
 }
 
 .radio-option:hover {
@@ -154,31 +157,70 @@
 
 @media (max-width: 768px) {
   .technician-panel-overlay {
-    padding: 10px;
+    padding: var(--space-2, 8px);
+    align-items: flex-start;
+    padding-top: var(--space-4, 16px);
+  }
+  
+  .technician-panel {
+    max-height: 95vh;
+    margin-top: auto;
   }
   
   .panel-header {
-    padding: 15px 20px;
+    padding: var(--space-3, 12px) var(--space-4, 16px);
   }
   
   .panel-header h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
   
   .issue-summary {
-    padding: 15px 20px;
+    padding: var(--space-3, 12px) var(--space-4, 16px);
   }
   
   .technician-form {
-    padding: 20px;
+    padding: var(--space-4, 16px);
   }
   
   .form-actions {
     flex-direction: column;
+    gap: var(--space-3, 12px);
   }
   
   .form-actions .btn {
     max-width: none;
     width: 100%;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .technician-panel-overlay {
+    padding: var(--space-1, 4px);
+  }
+  
+  .panel-header {
+    padding: var(--space-2, 8px) var(--space-3, 12px);
+  }
+  
+  .panel-header h2 {
+    font-size: 16px;
+  }
+  
+  .issue-summary {
+    padding: var(--space-2, 8px) var(--space-3, 12px);
+  }
+  
+  .issue-summary h3 {
+    font-size: 16px;
+  }
+  
+  .technician-form {
+    padding: var(--space-3, 12px);
+  }
+  
+  .radio-option {
+    padding: var(--space-3, 12px);
   }
 }

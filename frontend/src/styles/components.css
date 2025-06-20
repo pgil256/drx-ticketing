@@ -283,6 +283,18 @@
   .grid-cols-3 {
     grid-template-columns: 1fr;
   }
+  
+  .btn {
+    font-size: var(--text-base);
+    padding: var(--space-3) var(--space-5);
+  }
+  
+  .form-input,
+  .form-textarea,
+  .form-select {
+    font-size: var(--text-base);
+    padding: var(--space-3) var(--space-4);
+  }
 }
 
 /* Accessibility Enhancements */
@@ -313,22 +325,25 @@
 /* Improved Touch Targets */
 @media (hover: none) and (pointer: coarse) {
   .btn {
-    min-height: 44px;
-    min-width: 44px;
+    min-height: 48px;
+    min-width: 48px;
     padding: var(--space-4) var(--space-6);
+    font-size: var(--text-base);
   }
   
   .btn-sm {
-    min-height: 40px;
-    min-width: 40px;
+    min-height: 44px;
+    min-width: 44px;
     padding: var(--space-3) var(--space-4);
+    font-size: var(--text-sm);
   }
   
   .form-input,
   .form-textarea,
   .form-select {
-    min-height: 44px;
+    min-height: 48px;
     padding: var(--space-4) var(--space-5);
+    font-size: var(--text-base);
   }
 }
 

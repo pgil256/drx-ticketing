@@ -118,31 +118,75 @@
 }
 
 @media (max-width: 768px) {
+  .filters-section {
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+  }
+  
   .search-group {
     flex-direction: column;
     max-width: none;
+    gap: var(--space-3);
   }
   
   .search-input {
     width: 100%;
+    min-height: 48px;
+    font-size: var(--text-base);
   }
   
   .filter-controls {
     flex-direction: column;
-    gap: 15px;
+    gap: var(--space-4);
+    align-items: stretch;
   }
   
   .filter-group {
     justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  
+  .filter-select {
+    min-height: 44px;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
   }
   
   .pagination {
     flex-direction: column;
-    gap: 15px;
+    gap: var(--space-4);
   }
   
   .pagination .btn {
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters-section {
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+  
+  .filter-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+  }
+  
+  .filter-group label {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+  }
+  
+  .filter-select {
+    width: 100%;
+  }
+  
+  .pagination-info {
+    font-size: var(--text-base);
+    text-align: center;
   }
 }

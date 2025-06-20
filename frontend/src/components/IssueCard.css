@@ -185,34 +185,63 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .issue-card {
-    padding: var(--space-3);
+    padding: var(--space-4);
+    margin-bottom: var(--space-3);
   }
 
   .issue-header {
     flex-direction: column;
     align-items: stretch;
+    gap: var(--space-3);
   }
   
   .issue-meta {
     justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap;
+    gap: var(--space-2);
   }
   
   .issue-actions {
     width: 100%;
     justify-content: flex-end;
   }
+  
+  .badge {
+    font-size: var(--text-sm);
+    padding: var(--space-2) var(--space-3);
+  }
 }
 
 @media (max-width: 480px) {
+  .issue-card {
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+  }
+  
   .issue-body {
-    gap: var(--space-2);
+    gap: var(--space-3);
   }
 
   .user-info,
   .issue-description,
   .detail-section,
   .technician-info {
-    padding: var(--space-2);
+    padding: var(--space-3);
+  }
+  
+  .issue-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  
+  .issue-id {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+  }
+  
+  .badge {
+    align-self: flex-start;
   }
 }

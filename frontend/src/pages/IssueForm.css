@@ -75,9 +75,13 @@
     padding: var(--space-3);
   }
   
+  .issue-form {
+    gap: var(--space-6);
+  }
+  
   .form-help {
-    margin-top: var(--space-4);
-    padding: var(--space-3);
+    margin-top: var(--space-6);
+    padding: var(--space-4);
   }
   
   .draft-indicator {
@@ -86,33 +90,42 @@
     left: var(--space-4);
     text-align: center;
     border-radius: var(--radius-md);
+    font-size: var(--text-sm);
   }
 }
 
 @media (max-width: 480px) {
   .issue-form-page {
     padding: var(--space-2);
+    max-width: 100%;
   }
   
   .issue-form {
-    gap: var(--space-3);
+    gap: var(--space-4);
   }
   
   .form-help {
-    padding: var(--space-2);
-    margin-top: var(--space-3);
+    padding: var(--space-3);
+    margin-top: var(--space-4);
   }
   
   .form-help h3 {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-2);
+  }
+  
+  .form-help li {
     font-size: var(--text-sm);
+    margin-bottom: var(--space-1);
   }
   
   .draft-indicator {
     bottom: var(--space-3);
     right: var(--space-3);
     left: var(--space-3);
-    font-size: var(--text-xs);
-    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-sm);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
   }
 }
 

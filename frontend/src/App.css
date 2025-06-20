@@ -192,7 +192,8 @@
   .form-container {
     padding: var(--space-6);
     margin: 0 var(--space-2);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
   }
 
   .page-header {
@@ -228,8 +229,23 @@
 }
 
 @media (max-width: 480px) {
+  .main-content {
+    padding: var(--space-3) var(--space-2);
+  }
+  
   .form-container {
     margin: 0;
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+  }
+  
+  .page-header {
+    margin-bottom: var(--space-6);
+    text-align: center;
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: var(--space-4);
   }
 }

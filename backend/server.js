@@ -10,6 +10,9 @@ const { initializeDatabase } = require('./database/postgres');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Trust proxy for Railway deployment
+app.set('trust proxy', true);
+
 // Security middleware
 app.use(helmet());
 

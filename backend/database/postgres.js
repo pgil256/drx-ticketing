@@ -3,6 +3,9 @@ const { Pool } = require('pg');
 let pool;
 
 const initializeDatabase = async () => {
+  console.log('DATABASE_URL:', process.env.DATABASE_URL ? 'SET' : 'NOT SET');
+  console.log('NODE_ENV:', process.env.NODE_ENV);
+  
   pool = new Pool({
     connectionString: process.env.DATABASE_URL,
     ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false

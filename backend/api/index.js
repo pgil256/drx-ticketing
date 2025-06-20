@@ -62,7 +62,7 @@ app.use('/issues', issuesRouter);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  res.json({ status: 'OK', timestamp: new Date().toISOString() });
+  res.json({ status: 'OK', timestamp: new Date().toISOString(), version: '1.1' });
 });
 
 // Error handling middleware

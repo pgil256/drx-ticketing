@@ -58,10 +58,10 @@ initializeDatabase().catch(err => {
 });
 
 // Routes
-app.use('/api/issues', issuesRouter);
+app.use('/issues', issuesRouter);
 
 // Health check endpoint
-app.get('/api/health', (req, res) => {
+app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 

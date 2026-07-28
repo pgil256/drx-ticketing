@@ -49,3 +49,9 @@ Thumbs.db
 *.swo
 *~
 .vercel
+
+# Local agent config
+.claude/
+CLAUDE.md
+AGENTS.md
+.mcp.json
